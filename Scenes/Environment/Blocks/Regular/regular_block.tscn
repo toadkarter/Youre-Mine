@@ -6,6 +6,7 @@
 size = Vector2(16, 16)
 
 [node name="RegularBlock" type="StaticBody2D"]
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_kaldt")
