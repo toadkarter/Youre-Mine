@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-@export var speed = 300.0
-@export var jump_velocity = -400.0
+@export var speed: float = 150.0
+@export var jump_velocity: float = -350.0
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -23,7 +23,7 @@ func _handle_fall(delta: float) -> void:
 
 
 func _handle_move_input() -> void:
-	var direction := Input.get_axis("left", "right")
+	var direction: float = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed
 	else:

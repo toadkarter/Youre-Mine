@@ -233,8 +233,6 @@ layer_0/tile_data = PackedInt32Array(0, 0, 1, 65536, 0, 4, 131072, 0, 4, 196608,
 
 [node name="Player" parent="." instance=ExtResource("2_r86f6")]
 position = Vector2(109, 290)
-speed = 150.0
-jump_velocity = -350.0
 
 [node name="RegularBlock" parent="." instance=ExtResource("3_vl37q")]
 position = Vector2(296, 288)
