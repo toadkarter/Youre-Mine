@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3r8mhrq2ydjn"]
+[gd_scene load_steps=10 format=3 uid="uid://c3r8mhrq2ydjn"]
 
 [ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_ddd4i"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_r86f6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3dyufewkt7cl" path="res://Scenes/Environment/Pillars/pillar_base.tscn" id="4_dy7y3"]
 [ext_resource type="PackedScene" uid="uid://cd427g2i2gtsv" path="res://Scenes/Environment/Pillars/pillar_core.tscn" id="5_4gtnp"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="6_rpinq"]
+[ext_resource type="PackedScene" uid="uid://drkwub6uxpdf" path="res://Scenes/Environment/Blocks/Movable/movable_block.tscn" id="7_fu42q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("1_ddd4i")
@@ -248,3 +249,6 @@ position = Vector2(160, 296)
 
 [node name="RegularBlock5" parent="." instance=ExtResource("6_rpinq")]
 position = Vector2(160, 280)
+
+[node name="MovableBlock" parent="." instance=ExtResource("7_fu42q")]
+position = Vector2(64, 328)
