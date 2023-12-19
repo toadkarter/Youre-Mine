@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bs2g3w47a1meb"
+path="res://.godot/imported/Uncle Lee 3x6.ttf-a375445fbcc17485c5a57d310d0959bd.fontdata"
+
+[deps]
+
+source_file="res://Art/Fonts/Uncle Lee 3x6.ttf"
+dest_files=["res://.godot/imported/Uncle Lee 3x6.ttf-a375445fbcc17485c5a57d310d0959bd.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
