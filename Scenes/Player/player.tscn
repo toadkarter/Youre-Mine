@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs1p0fe5g3h5v"]
+
+[ext_resource type="Texture2D" uid="uid://b3yr1cxbajp1y" path="res://Art/Tilesets/CharacterSplit/Run/run_01.png" id="1_fy6te"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cv00b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fy6te")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cv00b")
+frame_progress = 1.0
