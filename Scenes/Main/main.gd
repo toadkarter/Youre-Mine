@@ -2,6 +2,7 @@ extends Node2D
 
 
 @export var level_scenes: Array[PackedScene]
+@export_group("Debug")
 @export var debug_level_index: int = 0
 
 var current_level_index: int = 0
