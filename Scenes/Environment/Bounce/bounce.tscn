@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj238web5svar"]
+
+[ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_dfcq5"]
+[ext_resource type="Script" path="res://Scenes/Environment/Bounce/bounce.gd" id="1_unax2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okovm"]
+size = Vector2(16, 4)
+
+[node name="Bounce" type="StaticBody2D"]
+collision_mask = 3
+script = ExtResource("1_unax2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 4)
+rotation = 1.5708
+texture = ExtResource("1_dfcq5")
+region_enabled = true
+region_rect = Rect2(16, 96, 8, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_okovm")

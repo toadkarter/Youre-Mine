@@ -25,6 +25,7 @@ func _load_level(index: int) -> void:
 		current_level.queue_free()
 	current_level = level_scenes[index].instantiate() as Level
 	add_child(current_level)
+	print(current_level.name)
 	current_level.connect("finished", _on_level_finished)
 
 

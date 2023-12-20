@@ -228,7 +228,7 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_hewuo")
 
-[node name="Base" type="Node2D"]
+[node name="Level1" type="Node2D"]
 script = ExtResource("1_hopgw")
 player_scene = ExtResource("2_7xsg0")
 
