@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cs1p0fe5g3h5v"]
+[gd_scene load_steps=15 format=3 uid="uid://cs1p0fe5g3h5v"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_5kaef"]
 [ext_resource type="Texture2D" uid="uid://b3yr1cxbajp1y" path="res://Art/Tilesets/CharacterSplit/Run/run_01.png" id="1_fy6te"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bu6ac6tliygpj" path="res://Art/Tilesets/CharacterSplit/Dead/dead_05.png" id="7_rnrlx"]
 [ext_resource type="Texture2D" uid="uid://ctjmj7q4bc8ad" path="res://Art/Tilesets/CharacterSplit/Dead/dead_06.png" id="8_nmld3"]
 [ext_resource type="Texture2D" uid="uid://l8bjje2i2taa" path="res://Art/Tilesets/CharacterSplit/Dead/dead_07.png" id="9_wd6pe"]
+[ext_resource type="AudioStream" uid="uid://2bbg62trmar2" path="res://Audio/SFX/death.wav" id="12_hlmyw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cv00b"]
 animations = [{
@@ -77,3 +78,6 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_ae5cj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_hlmyw")

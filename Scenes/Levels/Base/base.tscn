@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cd427g2i2gtsv" path="res://Scenes/Environment/Pillars/pillar_core.tscn" id="5_4gtnp"]
 [ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="6_67hc8"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="6_rpinq"]
-[ext_resource type="FontFile" path="res://Art/Fonts/Fortzilla-Regular.otf" id="7_v3trn"]
+[ext_resource type="PackedScene" uid="uid://c0k6gvdlrdwtv" path="res://Scenes/UI/hud.tscn" id="8_ulwhi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("1_ddd4i")
@@ -250,29 +250,7 @@ position = Vector2(160, 280)
 [node name="spikes" parent="." instance=ExtResource("6_67hc8")]
 position = Vector2(136, 328)
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="HUD"]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("7_v3trn")
-theme_override_font_sizes/font_size = 90
-text = "YOU'RE
-MINE"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="HUD" parent="." instance=ExtResource("8_ulwhi")]
 
 [node name="SpawnLocation" type="Node2D" parent="."]
 position = Vector2(40, 328)

@@ -3,7 +3,9 @@ class_name BaseLevel
 extends Node2D
 
 @export var player_scene: PackedScene
+
 @onready var spawn_location: Node2D = $SpawnLocation
+@onready var hud: HUD = $HUD
 
 
 func _ready() -> void:
@@ -14,4 +16,4 @@ func _ready() -> void:
 
 
 func _on_player_died():
-	print("Hello")
+	hud.show_stinger_text()

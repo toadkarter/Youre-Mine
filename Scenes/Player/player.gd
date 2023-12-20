@@ -4,13 +4,18 @@ extends CharacterBody2D
 
 signal died
 
+@export_group("Movement")
 @export var speed: float = 150.0
 @export var jump_velocity: float = -350.0
+
+@export_group("Death")
+@export var death_length: float = 1.0
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_dying: bool = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 
 func _physics_process(delta: float) -> void:
@@ -66,5 +71,7 @@ func _check_collisions() -> void:
 func _die():
 	is_dying = true
 	animated_sprite.play("die")
+	audio_stream_player.play()
+	await get_tree().create_timer(death_length).timeout
 	died.emit()
 
