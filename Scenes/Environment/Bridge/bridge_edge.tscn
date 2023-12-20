@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4b11ljcnh8v1"]
+
+[ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_s73jk"]
+
+[node name="bridge_edge" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s73jk")
+region_enabled = true
+region_rect = Rect2(48, 80, 16, 16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(6.55651e-07, 0)
+scale = Vector2(0.390625, 0.390625)
+polygon = PackedVector2Array(-20.48, -20.48, 20.48, -20.48, 20.48, -2.56, 2.56, -2.56, -20.48, 20.48)

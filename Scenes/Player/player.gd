@@ -16,6 +16,12 @@ func _physics_process(delta: float) -> void:
 	_handle_move_animations()
 	move_and_slide()
 
+	for index in get_slide_collision_count():
+		var collider: KinematicCollision2D = get_slide_collision(index)
+		var rigid_body: Object = collider.get_collider()
+		if rigid_body is RigidBody2D:
+			rigid_body.apply_force(get_slide_collision(index).get_normal() * -1000)
+
 
 func _handle_fall(delta: float) -> void:
 	if not is_on_floor():

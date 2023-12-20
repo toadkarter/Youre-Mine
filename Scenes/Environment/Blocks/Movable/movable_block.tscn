@@ -2,11 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_0qky5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0fqp"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkhaw"]
 size = Vector2(16, 16)
 
 [node name="MovableBlock" type="RigidBody2D"]
 collision_mask = 3
+mass = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_0qky5")
@@ -14,4 +15,4 @@ region_enabled = true
 region_rect = Rect2(80, 96, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_r0fqp")
+shape = SubResource("RectangleShape2D_vkhaw")
