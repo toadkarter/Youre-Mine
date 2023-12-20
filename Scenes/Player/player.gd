@@ -82,6 +82,8 @@ func _check_collisions() -> void:
 
 
 func _die():
+	if is_dying:
+		return
 	is_dying = true
 	animated_sprite.play("die")
 	audio_stream_player.play()
