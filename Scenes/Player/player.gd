@@ -1,5 +1,8 @@
+class_name Player
+
 extends CharacterBody2D
 
+signal died
 
 @export var speed: float = 150.0
 @export var jump_velocity: float = -350.0
@@ -63,4 +66,5 @@ func _check_collisions() -> void:
 func _die():
 	is_dying = true
 	animated_sprite.play("die")
+	died.emit()
 

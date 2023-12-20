@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3r8mhrq2ydjn"]
+[gd_scene load_steps=11 format=3 uid="uid://c3r8mhrq2ydjn"]
 
+[ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_6tnnk"]
 [ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_ddd4i"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_r86f6"]
 [ext_resource type="PackedScene" uid="uid://d3dyufewkt7cl" path="res://Scenes/Environment/Pillars/pillar_base.tscn" id="4_dy7y3"]
 [ext_resource type="PackedScene" uid="uid://cd427g2i2gtsv" path="res://Scenes/Environment/Pillars/pillar_core.tscn" id="5_4gtnp"]
 [ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="6_67hc8"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="6_rpinq"]
+[ext_resource type="FontFile" path="res://Art/Fonts/Fortzilla-Regular.otf" id="7_v3trn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("1_ddd4i")
@@ -225,6 +227,7 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_hewuo")
 
 [node name="Base" type="Node2D"]
+script = ExtResource("1_6tnnk")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xm82w")
@@ -249,3 +252,27 @@ position = Vector2(160, 280)
 
 [node name="spikes" parent="." instance=ExtResource("6_67hc8")]
 position = Vector2(136, 328)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="HUD"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_v3trn")
+theme_override_font_sizes/font_size = 90
+text = "YOU'RE
+MINE"
+horizontal_alignment = 1
+vertical_alignment = 1
