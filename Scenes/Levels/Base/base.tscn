@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3r8mhrq2ydjn"]
+[gd_scene load_steps=9 format=3 uid="uid://c3r8mhrq2ydjn"]
 
 [ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_ddd4i"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_r86f6"]
-[ext_resource type="PackedScene" uid="uid://b7sgblnp72dty" path="res://Scenes/Environment/Blocks/Regular/regular_block.tscn" id="3_vl37q"]
 [ext_resource type="PackedScene" uid="uid://d3dyufewkt7cl" path="res://Scenes/Environment/Pillars/pillar_base.tscn" id="4_dy7y3"]
 [ext_resource type="PackedScene" uid="uid://cd427g2i2gtsv" path="res://Scenes/Environment/Pillars/pillar_core.tscn" id="5_4gtnp"]
+[ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="6_67hc8"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="6_rpinq"]
-[ext_resource type="PackedScene" uid="uid://drkwub6uxpdf" path="res://Scenes/Environment/Blocks/Movable/movable_block.tscn" id="7_fu42q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("1_ddd4i")
@@ -225,10 +224,7 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_hewuo")
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_15pe7"]
-friction = 0.0
-
-[node name="Node2D" type="Node2D"]
+[node name="Base" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_xm82w")
@@ -238,9 +234,6 @@ layer_0/tile_data = PackedInt32Array(0, 0, 1, 65536, 0, 4, 131072, 0, 4, 196608,
 [node name="Player" parent="." instance=ExtResource("2_r86f6")]
 position = Vector2(109, 290)
 metadata/_edit_lock_ = true
-
-[node name="RegularBlock12" parent="." instance=ExtResource("3_vl37q")]
-position = Vector2(232, 296)
 
 [node name="RegularBlock2" parent="." instance=ExtResource("4_dy7y3")]
 position = Vector2(160, 328)
@@ -254,13 +247,5 @@ position = Vector2(160, 296)
 [node name="RegularBlock5" parent="." instance=ExtResource("6_rpinq")]
 position = Vector2(160, 280)
 
-[node name="MovableBlock" parent="." instance=ExtResource("7_fu42q")]
-position = Vector2(64, 304)
-collision_layer = 4
-collision_mask = 7
-physics_material_override = SubResource("PhysicsMaterial_15pe7")
-lock_rotation = true
-linear_damp_mode = 1
-linear_damp = 1.0
-angular_damp_mode = 1
-angular_damp = 1.0
+[node name="spikes" parent="." instance=ExtResource("6_67hc8")]
+position = Vector2(136, 328)

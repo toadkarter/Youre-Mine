@@ -1,9 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cs1p0fe5g3h5v"]
+[gd_scene load_steps=14 format=3 uid="uid://cs1p0fe5g3h5v"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_5kaef"]
 [ext_resource type="Texture2D" uid="uid://b3yr1cxbajp1y" path="res://Art/Tilesets/CharacterSplit/Run/run_01.png" id="1_fy6te"]
+[ext_resource type="Texture2D" uid="uid://l3uvadquckhe" path="res://Art/Tilesets/CharacterSplit/Dead/dead_01.png" id="3_8s075"]
 [ext_resource type="Texture2D" uid="uid://cuuq66rd5y3un" path="res://Art/Tilesets/CharacterSplit/Run/run_03.png" id="3_74u1h"]
+[ext_resource type="Texture2D" uid="uid://cd1y0o1jcn4x5" path="res://Art/Tilesets/CharacterSplit/Dead/dead_02.png" id="4_id8al"]
 [ext_resource type="Texture2D" uid="uid://b3i2au4myhvdb" path="res://Art/Tilesets/CharacterSplit/Run/run_04.png" id="4_qcsr5"]
+[ext_resource type="Texture2D" uid="uid://dsnpm08ljv4ka" path="res://Art/Tilesets/CharacterSplit/Dead/dead_03.png" id="5_fu2c2"]
+[ext_resource type="Texture2D" uid="uid://b1d0yfmodrpxv" path="res://Art/Tilesets/CharacterSplit/Dead/dead_04.png" id="6_6shre"]
+[ext_resource type="Texture2D" uid="uid://bu6ac6tliygpj" path="res://Art/Tilesets/CharacterSplit/Dead/dead_05.png" id="7_rnrlx"]
+[ext_resource type="Texture2D" uid="uid://ctjmj7q4bc8ad" path="res://Art/Tilesets/CharacterSplit/Dead/dead_06.png" id="8_nmld3"]
+[ext_resource type="Texture2D" uid="uid://l8bjje2i2taa" path="res://Art/Tilesets/CharacterSplit/Dead/dead_07.png" id="9_wd6pe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cv00b"]
 animations = [{
@@ -14,6 +21,32 @@ animations = [{
 "loop": false,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8s075")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_id8al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fu2c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6shre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rnrlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nmld3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wd6pe")
+}],
+"loop": false,
+"name": &"die",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -37,8 +70,9 @@ script = ExtResource("1_5kaef")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cv00b")
-animation = &"run"
-frame_progress = 0.737708
+animation = &"die"
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
