@@ -1,8 +1,11 @@
-class_name BaseLevel
+class_name Level
 
 extends Node2D
 
+signal finished
+
 @export var player_scene: PackedScene
+@export var seconds_before_next_level: float = 1.0
 
 @onready var spawn_location: Node2D = $SpawnLocation
 @onready var hud: HUD = $HUD
@@ -22,3 +25,5 @@ func _init_player() -> void:
 
 func _on_player_died():
 	hud.show_stinger_text()
+	await get_tree().create_timer(seconds_before_next_level).timeout
+	finished.emit()
