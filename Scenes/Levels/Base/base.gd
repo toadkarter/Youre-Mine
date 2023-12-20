@@ -9,6 +9,11 @@ extends Node2D
 
 
 func _ready() -> void:
+	get_tree().call_group("Debug", "queue_free")
+	_init_player()
+
+
+func _init_player() -> void:
 	var player = player_scene.instantiate()
 	add_child(player)
 	player.position = spawn_location.position

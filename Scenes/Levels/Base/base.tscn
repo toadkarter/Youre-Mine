@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3r8mhrq2ydjn"]
+[gd_scene load_steps=13 format=3 uid="uid://c3r8mhrq2ydjn"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_6tnnk"]
 [ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_ddd4i"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="6_67hc8"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="6_rpinq"]
 [ext_resource type="PackedScene" uid="uid://c0k6gvdlrdwtv" path="res://Scenes/UI/hud.tscn" id="8_ulwhi"]
+[ext_resource type="PackedScene" uid="uid://c4b11ljcnh8v1" path="res://Scenes/Environment/Bridge/bridge_edge.tscn" id="9_rb8u3"]
+[ext_resource type="PackedScene" uid="uid://6sgqaad6xubw" path="res://Scenes/Environment/Bridge/bridge_core.tscn" id="10_mnab5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("1_ddd4i")
@@ -244,8 +246,50 @@ position = Vector2(160, 312)
 [node name="RegularBlock4" parent="." instance=ExtResource("5_4gtnp")]
 position = Vector2(160, 296)
 
-[node name="RegularBlock5" parent="." instance=ExtResource("6_rpinq")]
+[node name="RegularBlock9" parent="." instance=ExtResource("5_4gtnp")]
 position = Vector2(160, 280)
+
+[node name="RegularBlock10" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 264)
+
+[node name="RegularBlock11" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 248)
+
+[node name="RegularBlock12" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 232)
+
+[node name="RegularBlock13" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 216)
+
+[node name="RegularBlock14" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 200)
+
+[node name="RegularBlock15" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 184)
+
+[node name="RegularBlock16" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 168)
+
+[node name="RegularBlock17" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 184)
+
+[node name="RegularBlock18" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 168)
+
+[node name="RegularBlock19" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 152)
+
+[node name="RegularBlock20" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 136)
+
+[node name="RegularBlock21" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 152)
+
+[node name="RegularBlock22" parent="." instance=ExtResource("5_4gtnp")]
+position = Vector2(160, 136)
+
+[node name="RegularBlock5" parent="." instance=ExtResource("6_rpinq")]
+position = Vector2(200, 288)
 
 [node name="spikes" parent="." instance=ExtResource("6_67hc8")]
 position = Vector2(136, 328)
@@ -254,3 +298,60 @@ position = Vector2(136, 328)
 
 [node name="SpawnLocation" type="Node2D" parent="."]
 position = Vector2(40, 328)
+
+[node name="bridge_edge" parent="." instance=ExtResource("9_rb8u3")]
+position = Vector2(144, 304)
+scale = Vector2(-1, 1)
+
+[node name="RegularBlock" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(128, 304)
+
+[node name="RegularBlock6" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(112, 304)
+
+[node name="bridge_edge3" parent="." instance=ExtResource("9_rb8u3")]
+position = Vector2(144, 232)
+scale = Vector2(-1, 1)
+
+[node name="RegularBlock23" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(128, 232)
+
+[node name="RegularBlock24" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(112, 232)
+
+[node name="bridge_edge5" parent="." instance=ExtResource("9_rb8u3")]
+position = Vector2(144, 152)
+scale = Vector2(-1, 1)
+
+[node name="RegularBlock27" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(128, 152)
+
+[node name="RegularBlock28" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(112, 152)
+
+[node name="bridge_edge2" parent="." instance=ExtResource("9_rb8u3")]
+position = Vector2(24, 264)
+
+[node name="RegularBlock7" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(56, 264)
+
+[node name="RegularBlock8" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(40, 264)
+
+[node name="bridge_edge4" parent="." instance=ExtResource("9_rb8u3")]
+position = Vector2(24, 192)
+
+[node name="RegularBlock25" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(56, 192)
+
+[node name="RegularBlock26" parent="." instance=ExtResource("10_mnab5")]
+position = Vector2(40, 192)
+
+[node name="MaxFallDamageLine" type="Line2D" parent="." groups=["Debug"]]
+points = PackedVector2Array(16, 64, 336, 64)
+width = 1.0
+
+[node name="JumpFallDamageLine" type="Line2D" parent="." groups=["Debug"]]
+position = Vector2(0, 80)
+points = PackedVector2Array(16, 64, 336, 64)
+width = 1.0

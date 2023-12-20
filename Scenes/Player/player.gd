@@ -7,14 +7,17 @@ signal died
 @export_group("Movement")
 @export var speed: float = 150.0
 @export var jump_velocity: float = -350.0
+@export var fall_damage_velocity: float = 700.0
 
 @export_group("Death")
 @export var death_length: float = 1.0
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
+var will_die_from_fall_damage: bool = false
 var is_dying: bool = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var audio_stream_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 
@@ -30,10 +33,17 @@ func _physics_process(delta: float) -> void:
 
 	_check_collisions()
 
+	if will_die_from_fall_damage:
+		animation_player.stop()
+		_die()
+
 
 func _handle_fall(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		if velocity.y > fall_damage_velocity and !will_die_from_fall_damage:
+			will_die_from_fall_damage = true
+			animation_player.play("fall_damage")
 
 
 func _handle_move_input() -> void:
