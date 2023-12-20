@@ -1,11 +1,17 @@
+class_name BaseLevel
+
 extends Node2D
 
+@export var player_scene: PackedScene
+@onready var spawn_location: Node2D = $SpawnLocation
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	var player = player_scene.instantiate()
+	add_child(player)
+	player.position = spawn_location.position
+	player.connect("died", _on_player_died)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_player_died():
+	print("Hello")
