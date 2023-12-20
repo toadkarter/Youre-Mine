@@ -7,8 +7,12 @@ extends Node2D
 var current_level_index: int = 0
 var current_level: Level = null
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
+	_start_level_loop()
+
+
+func _start_level_loop() -> void:
 	if (debug_level_index != 0 and debug_level_index < level_scenes.size()):
 		_load_level(debug_level_index)
 	else:

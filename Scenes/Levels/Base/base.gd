@@ -5,14 +5,14 @@ extends Node2D
 signal finished
 
 @export var player_scene: PackedScene
-@export var seconds_before_next_level: float = 1.0
+@export var seconds_before_next_level: float = 1.5
 
 @onready var spawn_location: Node2D = $SpawnLocation
 @onready var hud: HUD = $HUD
 
 
 func _ready() -> void:
-	get_tree().call_group("Debug", "queue_free")
+	get_tree().call_group("Debug", "hide")
 	_init_player()
 
 
