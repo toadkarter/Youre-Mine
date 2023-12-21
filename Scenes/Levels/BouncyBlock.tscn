@@ -241,7 +241,7 @@ layer_0/tile_data = PackedInt32Array(0, 0, 1, 65536, 0, 4, 131072, 0, 4, 196608,
 [node name="HUD" parent="." instance=ExtResource("4_bony4")]
 
 [node name="SpawnLocation" type="Node2D" parent="."]
-position = Vector2(40, 328)
+position = Vector2(40, 320)
 
 [node name="MaxFallDamageLine" type="Line2D" parent="." groups=["Debug"]]
 points = PackedVector2Array(16, 64, 336, 64)

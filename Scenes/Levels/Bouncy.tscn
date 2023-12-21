@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bm7vtdyj0uv48"]
+[gd_scene load_steps=14 format=3 uid="uid://bm7vtdyj0uv48"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_xag5k"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_bfebm"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cd427g2i2gtsv" path="res://Scenes/Environment/Pillars/pillar_core.tscn" id="7_l2vq4"]
 [ext_resource type="PackedScene" uid="uid://d3dyufewkt7cl" path="res://Scenes/Environment/Pillars/pillar_base.tscn" id="8_gmfka"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="9_vr2th"]
+[ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="11_4vmv7"]
 [ext_resource type="PackedScene" uid="uid://b60rf373tj24s" path="res://Scenes/Environment/Pillars/pillar_broke_top.tscn" id="11_cd7w3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
@@ -364,3 +365,129 @@ position = Vector2(152, 24)
 
 [node name="PillarBrokeTop" parent="." instance=ExtResource("11_cd7w3")]
 position = Vector2(152, 232)
+
+[node name="RegularBlock3" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(168, 184)
+
+[node name="RegularBlock24" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(184, 184)
+
+[node name="RegularBlock37" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(200, 184)
+
+[node name="Spikes" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(168, 200)
+rotation = 3.14159
+
+[node name="Spikes2" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(200, 200)
+rotation = 3.14159
+
+[node name="Spikes3" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(184, 200)
+rotation = 3.14159
+
+[node name="RegularBlock38" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(104, 184)
+
+[node name="RegularBlock39" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(120, 184)
+
+[node name="RegularBlock40" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(136, 184)
+
+[node name="Spikes4" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(104, 200)
+rotation = 3.14159
+
+[node name="Spikes5" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(136, 200)
+rotation = 3.14159
+
+[node name="Spikes6" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(120, 200)
+rotation = 3.14159
+
+[node name="RegularBlock41" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(56, 184)
+
+[node name="RegularBlock42" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(72, 184)
+
+[node name="RegularBlock43" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(88, 184)
+
+[node name="Spikes7" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(56, 200)
+rotation = 3.14159
+
+[node name="Spikes8" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(88, 200)
+rotation = 3.14159
+
+[node name="Spikes9" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(72, 200)
+rotation = 3.14159
+
+[node name="RegularBlock44" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(232, 184)
+
+[node name="RegularBlock45" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(248, 184)
+
+[node name="RegularBlock46" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(264, 184)
+
+[node name="Spikes10" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(232, 200)
+rotation = 3.14159
+
+[node name="Spikes11" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(264, 200)
+rotation = 3.14159
+
+[node name="Spikes12" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(248, 200)
+rotation = 3.14159
+
+[node name="RegularBlock47" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(280, 184)
+
+[node name="RegularBlock48" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(296, 184)
+
+[node name="RegularBlock49" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(312, 184)
+
+[node name="Spikes13" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(280, 200)
+rotation = 3.14159
+
+[node name="Spikes14" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(312, 200)
+rotation = 3.14159
+
+[node name="RegularBlock50" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(328, 184)
+
+[node name="Spikes16" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(328, 200)
+rotation = 3.14159
+
+[node name="RegularBlock51" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(40, 184)
+
+[node name="Spikes17" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(40, 200)
+rotation = 3.14159
+
+[node name="RegularBlock52" parent="." instance=ExtResource("6_ia8uu")]
+position = Vector2(24, 184)
+
+[node name="Spikes18" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(24, 200)
+rotation = 3.14159
+
+[node name="Spikes15" parent="." instance=ExtResource("11_4vmv7")]
+position = Vector2(296, 200)
+rotation = 3.14159
