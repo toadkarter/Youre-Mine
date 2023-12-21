@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c7jec3a1rqbmg" path="res://Scenes/Levels/DroppableTiming.tscn" id="6_rao22"]
 [ext_resource type="PackedScene" uid="uid://dg421ssddc7vw" path="res://Scenes/Levels/EyeOfTheNeedle.tscn" id="7_5marn"]
 [ext_resource type="PackedScene" uid="uid://qyam8fakyqbt" path="res://Scenes/Levels/BouncyFallDamage.tscn" id="8_r3bch"]
-[ext_resource type="PackedScene" uid="uid://4bhy2hy2uy4e" path="res://Scenes/Levels/BouncyBlock.tscn" id="9_lfdtx"]
+[ext_resource type="PackedScene" uid="uid://4d10nmfvqhm0" path="res://Scenes/Levels/BouncyBlock.tscn" id="9_lfdtx"]
 [ext_resource type="FontFile" uid="uid://bs2g3w47a1meb" path="res://Art/Fonts/Uncle Lee 3x6.ttf" id="11_8arga"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwh47"]
@@ -18,8 +18,7 @@ shader_parameter/scanline_count = 50.0
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
-level_scenes = Array[PackedScene]([ExtResource("2_ivdax"), ExtResource("3_yjxo4"), ExtResource("4_tvkjn"), ExtResource("5_58k2d"), ExtResource("6_rao22"), ExtResource("7_5marn"), ExtResource("8_r3bch"), ExtResource("9_lfdtx")])
-debug_level_index = 2
+level_scenes = Array[PackedScene]([ExtResource("2_ivdax"), ExtResource("3_yjxo4"), ExtResource("7_5marn"), ExtResource("5_58k2d"), ExtResource("6_rao22"), ExtResource("4_tvkjn"), ExtResource("8_r3bch"), ExtResource("9_lfdtx")])
 show_level_number = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -33,9 +32,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="LevelNumber" type="Label" parent="CanvasLayer"]
-offset_left = 16.0
+offset_left = 24.0
 offset_top = 16.0
-offset_right = 94.0
+offset_right = 102.0
 offset_bottom = 39.0
 theme_override_fonts/font = ExtResource("11_8arga")
 text = "Current Level: "

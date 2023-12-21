@@ -35,3 +35,4 @@ func _on_player_died():
 	hud.show_stinger_text()
 	await get_tree().create_timer(seconds_before_next_level).timeout
 	finished.emit()
+	queue_free()
