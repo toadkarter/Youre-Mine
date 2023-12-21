@@ -89,7 +89,6 @@ func _check_collisions() -> void:
 		if collided_object is Damage:
 			_die()
 		if collided_object is Bounce and !is_dying:
-			print(collided_object.name)
 			velocity.y = jump_velocity * collided_object.get_jump_factor()
 
 
