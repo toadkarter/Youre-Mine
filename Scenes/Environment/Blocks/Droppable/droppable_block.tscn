@@ -12,6 +12,7 @@ size = Vector2(14, 2)
 [node name="DroppableBlock" type="RigidBody2D"]
 collision_mask = 2
 mass = 0.01
+lock_rotation = true
 script = ExtResource("1_j570f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
