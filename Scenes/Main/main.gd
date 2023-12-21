@@ -20,6 +20,7 @@ func _ready() -> void:
 
 func _start_level_loop() -> void:
 	if (debug_level_index != 0 and debug_level_index < level_scenes.size()):
+		current_level_index = debug_level_index
 		_load_level(debug_level_index)
 	else:
 		_load_level(current_level_index)
