@@ -14,7 +14,6 @@ shader_parameter/scanline_count = 50.0
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
 level_scenes = Array[PackedScene]([ExtResource("2_vse85"), ExtResource("3_me37r"), ExtResource("5_vtl37"), ExtResource("5_wnxux")])
-crt_filter_off = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

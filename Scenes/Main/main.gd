@@ -5,7 +5,7 @@ extends Node2D
 
 @export_group("Debug")
 @export var debug_level_index: int = 0
-@export var crt_filter_off: bool = false
+@export var crt_filter_on: bool = true
 
 var current_level_index: int = 0
 var current_level: Level = null
@@ -31,6 +31,7 @@ func _load_level(index: int) -> void:
 	current_level = level_scenes[index].instantiate() as Level
 	add_child(current_level)
 	current_level.connect("finished", _on_level_finished)
+	current_level.connect("restarted", _on_level_restarted)
 
 
 func _on_level_finished() -> void:
@@ -41,7 +42,10 @@ func _on_level_finished() -> void:
 		print("We have finished this level")
 
 
-func _init_debug_options() -> void:
-	if crt_filter_off:
-		crt_filter.visible = false
+func _on_level_restarted() -> void:
+	_load_level(current_level_index)
 
+
+func _init_debug_options() -> void:
+	if !crt_filter_on:
+		crt_filter.visible = false
