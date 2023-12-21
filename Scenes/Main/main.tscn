@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4pqaqxyf8enb"]
+[gd_scene load_steps=10 format=3 uid="uid://c4pqaqxyf8enb"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_dh43c"]
 [ext_resource type="PackedScene" uid="uid://pro1rrv2neou" path="res://Scenes/Levels/level1.tscn" id="2_vse85"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cqw3ulqdtouhy" path="res://Scenes/Levels/level4.tscn" id="5_wnxux"]
 [ext_resource type="Shader" path="res://Art/Shaders/crt.gdshader" id="6_5rkkj"]
 [ext_resource type="PackedScene" uid="uid://c7jec3a1rqbmg" path="res://Scenes/Levels/level5.tscn" id="6_hwhh4"]
+[ext_resource type="PackedScene" uid="uid://dg421ssddc7vw" path="res://Scenes/Levels/level6.tscn" id="7_avhu8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwh47"]
 shader = ExtResource("6_5rkkj")
@@ -14,7 +15,8 @@ shader_parameter/scanline_count = 50.0
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
-level_scenes = Array[PackedScene]([ExtResource("2_vse85"), ExtResource("3_me37r"), ExtResource("5_vtl37"), ExtResource("5_wnxux"), ExtResource("6_hwhh4")])
+level_scenes = Array[PackedScene]([ExtResource("2_vse85"), ExtResource("3_me37r"), ExtResource("5_vtl37"), ExtResource("5_wnxux"), ExtResource("6_hwhh4"), ExtResource("7_avhu8")])
+debug_level_index = 5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

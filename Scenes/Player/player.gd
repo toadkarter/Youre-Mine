@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 
 	_check_collisions()
 
-	if will_die_from_fall_damage:
+	if will_die_from_fall_damage and is_on_floor():
 		animation_player.stop()
 		_die()
 
@@ -42,21 +42,9 @@ func _handle_fall(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-		# if velocity.y > 0.0:
-		# 	var fall_damage_percentage: float = velocity.y / fall_damage_velocity
-		# 	var modulate_value = lerp(1, 0, fall_damage_percentage)
-		# 	animated_sprite.self_modulate.g = modulate_value
-		# 	animated_sprite.self_modulate.b = modulate_value
-
-
 		if velocity.y > fall_damage_velocity and !will_die_from_fall_damage:
 			will_die_from_fall_damage = true
 			animation_player.play("fall_damage")
-
-	# else:
-	# 	animated_sprite.self_modulate.g = 1.0
-	# 	animated_sprite.self_modulate.b = 1.0
-
 
 func _handle_move_input() -> void:
 	var direction: float = Input.get_axis("left", "right")
