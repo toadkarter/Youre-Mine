@@ -44,7 +44,7 @@ func _handle_fall(delta: float) -> void:
 
 		if velocity.y > fall_damage_velocity and !will_die_from_fall_damage:
 			will_die_from_fall_damage = true
-			animation_player.play("fall_damage")
+			# animation_player.play("fall_damage")
 
 func _handle_move_input() -> void:
 	var direction: float = Input.get_axis("left", "right")
@@ -77,6 +77,7 @@ func _check_collisions() -> void:
 		if collided_object is Damage:
 			_die()
 		if collided_object is Bounce and !is_dying:
+			will_die_from_fall_damage = false
 			velocity.y = jump_velocity * collided_object.get_jump_factor()
 
 
