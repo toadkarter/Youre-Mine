@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ca3wg8c2c3fe"]
+[gd_scene load_steps=14 format=3 uid="uid://ca3wg8c2c3fe"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_h06dg"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_ubufq"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="7_rfyqy"]
 [ext_resource type="PackedScene" uid="uid://c4b11ljcnh8v1" path="res://Scenes/Environment/Bridge/bridge_edge.tscn" id="8_d3ybe"]
 [ext_resource type="PackedScene" uid="uid://6sgqaad6xubw" path="res://Scenes/Environment/Bridge/bridge_core.tscn" id="9_ui4lx"]
+[ext_resource type="PackedScene" uid="uid://bdjen873586os" path="res://Scenes/Environment/Pillars/pillar_broke_bottom.tscn" id="10_j754k"]
+[ext_resource type="PackedScene" uid="uid://b60rf373tj24s" path="res://Scenes/Environment/Pillars/pillar_broke_top.tscn" id="11_vilfg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("3_graeu")
@@ -274,14 +276,8 @@ position = Vector2(136, 232)
 [node name="RegularBlock5" parent="." instance=ExtResource("6_mslcs")]
 position = Vector2(136, 216)
 
-[node name="RegularBlock10" parent="." instance=ExtResource("6_mslcs")]
-position = Vector2(136, 200)
-
 [node name="RegularBlock42" parent="." instance=ExtResource("6_mslcs")]
 position = Vector2(136, 40)
-
-[node name="RegularBlock38" parent="." instance=ExtResource("6_mslcs")]
-position = Vector2(136, 104)
 
 [node name="RegularBlock39" parent="." instance=ExtResource("6_mslcs")]
 position = Vector2(136, 88)
@@ -294,9 +290,6 @@ position = Vector2(136, 56)
 
 [node name="RegularBlock6" parent="." instance=ExtResource("7_rfyqy")]
 position = Vector2(136, 24)
-
-[node name="RegularBlock17" parent="." instance=ExtResource("6_mslcs")]
-position = Vector2(216, 296)
 
 [node name="RegularBlock18" parent="." instance=ExtResource("6_mslcs")]
 position = Vector2(216, 280)
@@ -322,17 +315,11 @@ position = Vector2(216, 152)
 [node name="RegularBlock47" parent="." instance=ExtResource("6_mslcs")]
 position = Vector2(216, 136)
 
-[node name="RegularBlock48" parent="." instance=ExtResource("6_mslcs")]
-position = Vector2(216, 120)
-
 [node name="RegularBlock21" parent="." instance=ExtResource("6_mslcs")]
 position = Vector2(216, 232)
 
 [node name="RegularBlock22" parent="." instance=ExtResource("6_mslcs")]
 position = Vector2(216, 216)
-
-[node name="RegularBlock23" parent="." instance=ExtResource("7_rfyqy")]
-position = Vector2(216, 24)
 
 [node name="bridge_edge" parent="." instance=ExtResource("8_d3ybe")]
 position = Vector2(120, 280)
@@ -396,3 +383,18 @@ position = Vector2(264, 216)
 
 [node name="RegularBlock29" parent="." instance=ExtResource("9_ui4lx")]
 position = Vector2(248, 216)
+
+[node name="PillarBrokeBottom" parent="." instance=ExtResource("10_j754k")]
+position = Vector2(136, 200)
+
+[node name="PillarBrokeTop" parent="." instance=ExtResource("11_vilfg")]
+position = Vector2(136, 104)
+
+[node name="PillarBrokeBottom2" parent="." instance=ExtResource("10_j754k")]
+position = Vector2(216, 120)
+
+[node name="PillarBrokeTop2" parent="." instance=ExtResource("11_vilfg")]
+position = Vector2(216, 24)
+
+[node name="PillarBrokeTop3" parent="." instance=ExtResource("11_vilfg")]
+position = Vector2(216, 296)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bm7vtdyj0uv48"]
+[gd_scene load_steps=14 format=3 uid="uid://bm7vtdyj0uv48"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_hbr54"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_2r1vj"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d3dyufewkt7cl" path="res://Scenes/Environment/Pillars/pillar_base.tscn" id="8_qj7t5"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="9_iwrq1"]
 [ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="10_hsa62"]
+[ext_resource type="PackedScene" uid="uid://b60rf373tj24s" path="res://Scenes/Environment/Pillars/pillar_broke_top.tscn" id="11_eucmi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("3_jliyf")
@@ -335,9 +336,6 @@ position = Vector2(216, 24)
 [node name="RegularBlock23" parent="." instance=ExtResource("7_xmdub")]
 position = Vector2(152, 216)
 
-[node name="RegularBlock24" parent="." instance=ExtResource("7_xmdub")]
-position = Vector2(152, 232)
-
 [node name="RegularBlock25" parent="." instance=ExtResource("7_xmdub")]
 position = Vector2(152, 200)
 
@@ -385,3 +383,6 @@ rotation = 3.14159
 [node name="Spikes3" parent="." instance=ExtResource("10_hsa62")]
 position = Vector2(200, 176)
 rotation = 3.14159
+
+[node name="PillarBrokeTop" parent="." instance=ExtResource("11_eucmi")]
+position = Vector2(152, 232)
