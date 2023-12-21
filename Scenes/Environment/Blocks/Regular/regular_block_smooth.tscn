@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcppw0w4h065u"]
+
+[ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_aty0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vjpn"]
+size = Vector2(16, 16)
+
+[node name="RegularBlock" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aty0v")
+region_enabled = true
+region_rect = Rect2(0, 128, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2vjpn")
