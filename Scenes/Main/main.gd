@@ -2,14 +2,19 @@ extends Node2D
 
 
 @export var level_scenes: Array[PackedScene]
+
 @export_group("Debug")
 @export var debug_level_index: int = 0
+@export var crt_filter_off: bool = false
 
 var current_level_index: int = 0
 var current_level: Level = null
 
+@onready var crt_filter: ColorRect = $CanvasLayer/CRTFilter
+
 
 func _ready() -> void:
+	_init_debug_options()
 	_start_level_loop()
 
 
@@ -35,4 +40,8 @@ func _on_level_finished() -> void:
 	else:
 		print("We have finished this level")
 
+
+func _init_debug_options() -> void:
+	if crt_filter_off:
+		crt_filter.visible = false
 

@@ -11,13 +11,14 @@
 shader = ExtResource("6_5rkkj")
 shader_parameter/scanline_count = 50.0
 
-[node name="main" type="Node2D"]
+[node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
 level_scenes = Array[PackedScene]([ExtResource("2_vse85"), ExtResource("3_me37r"), ExtResource("5_vtl37"), ExtResource("5_wnxux")])
+crt_filter_off = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="CRTFilter" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_cwh47")
 anchors_preset = 15
 anchor_right = 1.0
