@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqw3ulqdtouhy"]
+[gd_scene load_steps=14 format=3 uid="uid://cqw3ulqdtouhy"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_ta1oy"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_rgusn"]
 [ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="3_jiyw5"]
 [ext_resource type="PackedScene" uid="uid://c0k6gvdlrdwtv" path="res://Scenes/UI/hud.tscn" id="4_atjlc"]
 [ext_resource type="PackedScene" uid="uid://b00ne8eas3u3y" path="res://Scenes/Environment/Blocks/Droppable/droppable_block.tscn" id="5_uo54e"]
+[ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="6_8de15"]
+[ext_resource type="PackedScene" uid="uid://cd427g2i2gtsv" path="res://Scenes/Environment/Pillars/pillar_core.tscn" id="7_uf1wp"]
+[ext_resource type="PackedScene" uid="uid://d3dyufewkt7cl" path="res://Scenes/Environment/Pillars/pillar_base.tscn" id="8_2ywa8"]
+[ext_resource type="PackedScene" uid="uid://c4b11ljcnh8v1" path="res://Scenes/Environment/Bridge/bridge_edge.tscn" id="9_mkgqf"]
+[ext_resource type="PackedScene" uid="uid://6sgqaad6xubw" path="res://Scenes/Environment/Bridge/bridge_core.tscn" id="10_0pkld"]
+[ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="11_qdkfp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("3_jiyw5")
@@ -248,4 +254,80 @@ points = PackedVector2Array(16, 64, 336, 64)
 width = 1.0
 
 [node name="DroppableBlock" parent="." instance=ExtResource("5_uo54e")]
-position = Vector2(128, 303.821)
+position = Vector2(136, 263.821)
+
+[node name="DroppableBlock2" parent="." instance=ExtResource("5_uo54e")]
+position = Vector2(152, 263.821)
+
+[node name="DroppableBlock3" parent="." instance=ExtResource("5_uo54e")]
+position = Vector2(168, 263.821)
+
+[node name="DroppableBlock4" parent="." instance=ExtResource("5_uo54e")]
+position = Vector2(184, 263.821)
+
+[node name="DroppableBlock5" parent="." instance=ExtResource("5_uo54e")]
+position = Vector2(200, 263.821)
+
+[node name="DroppableBlock6" parent="." instance=ExtResource("5_uo54e")]
+position = Vector2(216, 263.821)
+
+[node name="RegularBlock" parent="." instance=ExtResource("6_8de15")]
+position = Vector2(120, 263.821)
+
+[node name="RegularBlock2" parent="." instance=ExtResource("7_uf1wp")]
+position = Vector2(120, 279.821)
+
+[node name="RegularBlock3" parent="." instance=ExtResource("7_uf1wp")]
+position = Vector2(120, 295.821)
+
+[node name="RegularBlock4" parent="." instance=ExtResource("7_uf1wp")]
+position = Vector2(120, 311.821)
+
+[node name="RegularBlock5" parent="." instance=ExtResource("8_2ywa8")]
+position = Vector2(120, 327.821)
+
+[node name="RegularBlock6" parent="." instance=ExtResource("6_8de15")]
+position = Vector2(232, 263.821)
+
+[node name="RegularBlock7" parent="." instance=ExtResource("7_uf1wp")]
+position = Vector2(232, 279.821)
+
+[node name="RegularBlock8" parent="." instance=ExtResource("7_uf1wp")]
+position = Vector2(232, 295.821)
+
+[node name="RegularBlock9" parent="." instance=ExtResource("7_uf1wp")]
+position = Vector2(232, 311.821)
+
+[node name="RegularBlock10" parent="." instance=ExtResource("8_2ywa8")]
+position = Vector2(232, 327.821)
+
+[node name="bridge_edge" parent="." instance=ExtResource("9_mkgqf")]
+position = Vector2(248, 295.821)
+
+[node name="RegularBlock11" parent="." instance=ExtResource("10_0pkld")]
+position = Vector2(264, 295.821)
+
+[node name="RegularBlock12" parent="." instance=ExtResource("10_0pkld")]
+position = Vector2(88, 295.821)
+
+[node name="bridge_edge2" parent="." instance=ExtResource("9_mkgqf")]
+position = Vector2(104, 295.821)
+scale = Vector2(-1, 1)
+
+[node name="Spikes" parent="." instance=ExtResource("11_qdkfp")]
+position = Vector2(136, 327.821)
+
+[node name="Spikes2" parent="." instance=ExtResource("11_qdkfp")]
+position = Vector2(152, 327.821)
+
+[node name="Spikes3" parent="." instance=ExtResource("11_qdkfp")]
+position = Vector2(168, 327.821)
+
+[node name="Spikes4" parent="." instance=ExtResource("11_qdkfp")]
+position = Vector2(184, 327.821)
+
+[node name="Spikes5" parent="." instance=ExtResource("11_qdkfp")]
+position = Vector2(200, 327.821)
+
+[node name="Spikes6" parent="." instance=ExtResource("11_qdkfp")]
+position = Vector2(216, 327.821)

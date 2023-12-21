@@ -17,7 +17,6 @@ func _on_body_entered(body: Node2D) -> void:
 		_handle_player_collision()
 
 
-
 func _handle_player_collision() -> void:
 	await get_tree().create_timer(seconds_before_falling).timeout
 	gravity_scale = 1.0
