@@ -7,13 +7,14 @@
 size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxc1n"]
-size = Vector2(14, 2)
+size = Vector2(14, 18)
 
 [node name="DroppableBlock" type="RigidBody2D"]
 collision_mask = 2
 mass = 0.01
 lock_rotation = true
 script = ExtResource("1_j570f")
+seconds_before_falling = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xqqsw")
@@ -27,5 +28,4 @@ shape = SubResource("RectangleShape2D_gc4pg")
 collision_mask = 2
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_wxc1n")

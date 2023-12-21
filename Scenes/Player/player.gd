@@ -89,4 +89,3 @@ func _die():
 	audio_stream_player.play()
 	await get_tree().create_timer(death_length).timeout
 	died.emit()
-
