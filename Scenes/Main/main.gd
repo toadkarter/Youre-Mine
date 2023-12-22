@@ -21,6 +21,11 @@ func _ready() -> void:
 	_start_level_loop()
 
 
+func _process(delta) -> void:
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+
+
 func _start_level_loop() -> void:
 	if (debug_level_index != 0 and debug_level_index < level_scenes.size()):
 		current_level_index = debug_level_index
