@@ -31,6 +31,7 @@ func _start_level_loop() -> void:
 
 func _load_level(index: int) -> void:
 	if current_level != null:
+		remove_child(current_level)
 		current_level.queue_free()
 	current_level = level_scenes[index].instantiate() as Level
 	add_child(current_level)
@@ -45,7 +46,7 @@ func _on_level_finished() -> void:
 	if (current_level_index < level_scenes.size()):
 		_load_level(current_level_index)
 	else:
-		print("We have finished this level")
+		print("We are at the end of the current game")
 
 
 func _on_level_restarted() -> void:

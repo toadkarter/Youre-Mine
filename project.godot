@@ -21,6 +21,10 @@ window/size/viewport_width=700
 window/size/viewport_height=700
 window/stretch/scale=2.0
 
+[dotnet]
+
+project/assembly_name="You-re Mine"
+
 [input]
 
 jump={
