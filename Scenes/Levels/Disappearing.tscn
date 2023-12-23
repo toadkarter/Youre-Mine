@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_3xthg"]
 [ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="3_q4ehe"]
 [ext_resource type="PackedScene" uid="uid://c0k6gvdlrdwtv" path="res://Scenes/UI/hud.tscn" id="4_4nsh6"]
-[ext_resource type="PackedScene" uid="uid://dl8pesfl8ylml" path="res://Scenes/Environment/Damage/Spikes/Movable/movable_spikes.tscn" id="5_iesks"]
+[ext_resource type="PackedScene" uid="uid://c11v6ukc0atlr" path="res://Scenes/Environment/Blocks/Disappearing/disappearing_block.tscn" id="6_pi5ub"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("3_q4ehe")
@@ -247,5 +247,14 @@ position = Vector2(0, 80)
 points = PackedVector2Array(16, 64, 336, 64)
 width = 1.0
 
-[node name="MovableSpikes" parent="." instance=ExtResource("5_iesks")]
-position = Vector2(80, 335.821)
+[node name="DisappearingBlock" parent="." instance=ExtResource("6_pi5ub")]
+position = Vector2(88, 279.821)
+seconds_between_toggle = 2.0
+
+[node name="DisappearingBlock2" parent="." instance=ExtResource("6_pi5ub")]
+position = Vector2(264, 215.821)
+seconds_between_toggle = 2.0
+
+[node name="DisappearingBlock3" parent="." instance=ExtResource("6_pi5ub")]
+position = Vector2(176, 247.821)
+seconds_between_toggle = 2.0
