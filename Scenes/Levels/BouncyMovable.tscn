@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dkrmcct1a56ua"]
+[gd_scene load_steps=17 format=3 uid="uid://dkrmcct1a56ua"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_ke3wb"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_ixhiq"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://b60rf373tj24s" path="res://Scenes/Environment/Pillars/pillar_broke_top.tscn" id="10_pib2w"]
 [ext_resource type="PackedScene" uid="uid://c11v6ukc0atlr" path="res://Scenes/Environment/Blocks/Disappearing/disappearing_block.tscn" id="11_1n8tn"]
 [ext_resource type="PackedScene" uid="uid://c4b11ljcnh8v1" path="res://Scenes/Environment/Bridge/bridge_edge.tscn" id="12_yivi2"]
+[ext_resource type="PackedScene" uid="uid://dvnrbgo8xlbb8" path="res://Scenes/Environment/Chains/chain_top.tscn" id="13_76ysa"]
+[ext_resource type="PackedScene" uid="uid://d26dgjn5x7q34" path="res://Scenes/Environment/Chains/chain_core.tscn" id="14_kmdpv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("3_o3msi")
@@ -505,3 +507,182 @@ position = Vector2(168, 136)
 [node name="bridge_edge2" parent="." instance=ExtResource("12_yivi2")]
 position = Vector2(184, 136)
 scale = Vector2(-1, 1)
+
+[node name="Chain" type="Node2D" parent="."]
+
+[node name="ChainTop" parent="Chain" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
+
+[node name="chain_core2" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 56)
+
+[node name="chain_core3" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 72)
+
+[node name="chain_core4" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 88)
+
+[node name="chain_core5" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 104)
+
+[node name="chain_core6" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 120)
+
+[node name="chain_core7" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 136)
+
+[node name="chain_core8" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 152)
+
+[node name="chain_core9" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 168)
+
+[node name="chain_core10" parent="Chain" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 184)
+
+[node name="Chain8" type="Node2D" parent="."]
+position = Vector2(304, 0)
+
+[node name="ChainTop" parent="Chain8" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
+
+[node name="chain_core2" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 56)
+
+[node name="chain_core3" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 72)
+
+[node name="chain_core4" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 88)
+
+[node name="chain_core5" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 104)
+
+[node name="chain_core6" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 120)
+
+[node name="chain_core7" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 136)
+
+[node name="chain_core8" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 152)
+
+[node name="chain_core9" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 168)
+
+[node name="chain_core10" parent="Chain8" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 184)
+
+[node name="Chain2" type="Node2D" parent="."]
+position = Vector2(16, 0)
+
+[node name="ChainTop" parent="Chain2" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain2" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
+
+[node name="chain_core2" parent="Chain2" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 56)
+
+[node name="chain_core3" parent="Chain2" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 72)
+
+[node name="chain_core4" parent="Chain2" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 88)
+
+[node name="chain_core5" parent="Chain2" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 104)
+
+[node name="chain_core6" parent="Chain2" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 120)
+
+[node name="chain_core7" parent="Chain2" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 136)
+
+[node name="Chain7" type="Node2D" parent="."]
+position = Vector2(288, 0)
+
+[node name="ChainTop" parent="Chain7" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain7" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
+
+[node name="chain_core2" parent="Chain7" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 56)
+
+[node name="chain_core3" parent="Chain7" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 72)
+
+[node name="chain_core4" parent="Chain7" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 88)
+
+[node name="chain_core5" parent="Chain7" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 104)
+
+[node name="chain_core6" parent="Chain7" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 120)
+
+[node name="chain_core7" parent="Chain7" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 136)
+
+[node name="Chain3" type="Node2D" parent="."]
+position = Vector2(32, 0)
+
+[node name="ChainTop" parent="Chain3" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain3" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
+
+[node name="chain_core2" parent="Chain3" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 56)
+
+[node name="chain_core3" parent="Chain3" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 72)
+
+[node name="chain_core4" parent="Chain3" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 88)
+
+[node name="Chain6" type="Node2D" parent="."]
+position = Vector2(272, 0)
+
+[node name="ChainTop" parent="Chain6" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain6" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
+
+[node name="chain_core2" parent="Chain6" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 56)
+
+[node name="chain_core3" parent="Chain6" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 72)
+
+[node name="chain_core4" parent="Chain6" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 88)
+
+[node name="Chain4" type="Node2D" parent="."]
+position = Vector2(48, 0)
+
+[node name="ChainTop" parent="Chain4" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain4" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
+
+[node name="Chain5" type="Node2D" parent="."]
+position = Vector2(256, 0)
+
+[node name="ChainTop" parent="Chain5" instance=ExtResource("13_76ysa")]
+position = Vector2(24, 24)
+
+[node name="chain_core" parent="Chain5" instance=ExtResource("14_kmdpv")]
+position = Vector2(24, 40)
