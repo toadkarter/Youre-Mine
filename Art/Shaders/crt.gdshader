@@ -1,4 +1,7 @@
-// https://godotshaders.com/shader/retro-tv-shader/
+/*
+* General approach for CRT shader taken and modified from the below:
+* https://godotshaders.com/shader/retro-tv-shader/
+*/
 
 shader_type canvas_item;
 
