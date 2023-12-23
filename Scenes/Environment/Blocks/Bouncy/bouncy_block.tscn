@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhfhug7pomlc5"]
+
+[ext_resource type="Script" path="res://Scenes/Environment/Blocks/Bouncy/bouncy_block.gd" id="1_77sp1"]
+[ext_resource type="Texture2D" uid="uid://dcqr4t4m8fp5o" path="res://Art/Tilesets/map.png" id="1_kcnvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r3ga"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5e3y"]
+size = Vector2(16, 8)
+
+[node name="BouncyBlock" type="RigidBody2D"]
+collision_mask = 3
+lock_rotation = true
+script = ExtResource("1_77sp1")
+
+[node name="Block" type="Sprite2D" parent="."]
+texture = ExtResource("1_kcnvt")
+region_enabled = true
+region_rect = Rect2(16, 144, 16, 15.9712)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3r3ga")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_a5e3y")
+
+[node name="Spikes" type="Sprite2D" parent="Hitbox" groups=["Damage"]]
+position = Vector2(0, 11)
+texture = ExtResource("1_kcnvt")
+region_enabled = true
+region_rect = Rect2(49, 128, 14, 8)

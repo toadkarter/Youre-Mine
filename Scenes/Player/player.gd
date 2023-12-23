@@ -74,7 +74,7 @@ func _check_collisions() -> void:
 	for index in get_slide_collision_count():
 		var collider: KinematicCollision2D = get_slide_collision(index)
 		var collided_object: Object = collider.get_collider()
-		if collided_object is Damage:
+		if collided_object.is_in_group("Damage"):
 			_die()
 		if collided_object is Bounce and !is_dying:
 			will_die_from_fall_damage = false
