@@ -43,7 +43,7 @@ func _load_level(index: int) -> void:
 	current_level.connect("finished", _on_level_finished)
 	current_level.connect("restarted", _on_level_restarted)
 
-	level_number_label.text = show_level_text % (index + 1)
+	level_number_label.text = show_level_text % index
 
 
 func _on_level_finished() -> void:
