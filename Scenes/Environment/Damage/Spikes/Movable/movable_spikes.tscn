@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://dl8pesfl8ylml"]
+
+[ext_resource type="Script" path="res://Scenes/Environment/Damage/Spikes/Movable/movable_spikes.gd" id="1_7opn3"]
+[ext_resource type="PackedScene" uid="uid://8bm3mpbr3gl1" path="res://Scenes/Environment/Damage/Spikes/spikes.tscn" id="1_6274x"]
+[ext_resource type="PackedScene" uid="uid://b7sgblnp72dty" path="res://Scenes/Environment/Blocks/Regular/regular_block.tscn" id="2_pvugw"]
+
+[sub_resource type="Animation" id="Animation_mr5hi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spikes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -8)]
+}
+
+[sub_resource type="Animation" id="Animation_4saly"]
+resource_name = "spikes_extend"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spikes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(0, -8)]
+}
+
+[sub_resource type="Animation" id="Animation_3dwo8"]
+resource_name = "spikes_retract"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spikes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -8), Vector2(0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omfmq"]
+_data = {
+"RESET": SubResource("Animation_mr5hi"),
+"spikes_extend": SubResource("Animation_4saly"),
+"spikes_retract": SubResource("Animation_3dwo8")
+}
+
+[node name="MovableSpikes" type="Node2D"]
+script = ExtResource("1_7opn3")
+
+[node name="Spikes" parent="." instance=ExtResource("1_6274x")]
+position = Vector2(0, -8)
+
+[node name="RegularBlock" parent="." instance=ExtResource("2_pvugw")]
+position = Vector2(0, 8)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_omfmq")
+}
