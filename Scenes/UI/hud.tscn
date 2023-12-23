@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0k6gvdlrdwtv"]
+[gd_scene load_steps=5 format=3 uid="uid://c0k6gvdlrdwtv"]
 
 [ext_resource type="FontFile" uid="uid://bgh6p7veytviu" path="res://Art/Fonts/Fortzilla-Regular.otf" id="1_62bt5"]
 [ext_resource type="Script" path="res://Scenes/UI/hud.gd" id="1_m6gbr"]
 [ext_resource type="AudioStream" uid="uid://c83kcgpba6q6g" path="res://Audio/SFX/stinger.wav" id="3_c653d"]
+[ext_resource type="FontFile" uid="uid://bs2g3w47a1meb" path="res://Art/Fonts/Uncle Lee 3x6.ttf" id="4_aqn4m"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_m6gbr")
@@ -41,3 +42,15 @@ text = "YOU'RE
 MINE"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 24.0
+offset_right = 20.0
+offset_bottom = 47.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_aqn4m")
+text = "- ALTITUDE WARNING -"

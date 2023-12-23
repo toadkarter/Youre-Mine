@@ -1,17 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4pqaqxyf8enb"]
+[gd_scene load_steps=15 format=3 uid="uid://c4pqaqxyf8enb"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_dh43c"]
-[ext_resource type="PackedScene" uid="uid://pro1rrv2neou" path="res://Scenes/Levels/Vanilla.tscn" id="2_ivdax"]
-[ext_resource type="PackedScene" uid="uid://ca3wg8c2c3fe" path="res://Scenes/Levels/FallDamage.tscn" id="3_yjxo4"]
-[ext_resource type="PackedScene" uid="uid://bm7vtdyj0uv48" path="res://Scenes/Levels/Bouncy.tscn" id="4_tvkjn"]
-[ext_resource type="PackedScene" uid="uid://cqw3ulqdtouhy" path="res://Scenes/Levels/DroppableBlock.tscn" id="5_58k2d"]
+[ext_resource type="PackedScene" uid="uid://pro1rrv2neou" path="res://Scenes/Levels/[0] Vanilla.tscn" id="2_qywhg"]
+[ext_resource type="PackedScene" uid="uid://ca3wg8c2c3fe" path="res://Scenes/Levels/[1] FallDamage.tscn" id="3_1tpor"]
+[ext_resource type="PackedScene" uid="uid://cqw3ulqdtouhy" path="res://Scenes/Levels/[2] DroppableBlock.tscn" id="4_hx6i5"]
+[ext_resource type="PackedScene" uid="uid://dg421ssddc7vw" path="res://Scenes/Levels/[3] EyeOfTheNeedle.tscn" id="4_mchev"]
 [ext_resource type="Shader" path="res://Art/Shaders/crt.gdshader" id="6_5rkkj"]
-[ext_resource type="PackedScene" uid="uid://c7jec3a1rqbmg" path="res://Scenes/Levels/DroppableTiming.tscn" id="6_rao22"]
-[ext_resource type="PackedScene" uid="uid://dg421ssddc7vw" path="res://Scenes/Levels/EyeOfTheNeedle.tscn" id="7_5marn"]
-[ext_resource type="PackedScene" uid="uid://qyam8fakyqbt" path="res://Scenes/Levels/BouncyFallDamage.tscn" id="8_r3bch"]
-[ext_resource type="PackedScene" uid="uid://4d10nmfvqhm0" path="res://Scenes/Levels/Disappearing.tscn" id="9_s4rlj"]
-[ext_resource type="PackedScene" uid="uid://dkrmcct1a56ua" path="res://Scenes/Levels/BouncyMovable.tscn" id="10_h5f0j"]
+[ext_resource type="PackedScene" uid="uid://c7jec3a1rqbmg" path="res://Scenes/Levels/[4] DroppableTiming.tscn" id="6_6ol7s"]
+[ext_resource type="PackedScene" uid="uid://bm7vtdyj0uv48" path="res://Scenes/Levels/[5] Bouncy.tscn" id="7_u8onq"]
+[ext_resource type="PackedScene" uid="uid://qyam8fakyqbt" path="res://Scenes/Levels/[6] BouncyFallDamage.tscn" id="8_0qx4g"]
+[ext_resource type="PackedScene" uid="uid://c4urvpht2kk2k" path="res://Scenes/Levels/[7] DisappearingVanilla.tscn" id="9_brqnt"]
+[ext_resource type="PackedScene" uid="uid://4d10nmfvqhm0" path="res://Scenes/Levels/[8] Disappearing.tscn" id="10_joakj"]
 [ext_resource type="FontFile" uid="uid://bs2g3w47a1meb" path="res://Art/Fonts/Uncle Lee 3x6.ttf" id="11_8arga"]
+[ext_resource type="PackedScene" uid="uid://dkrmcct1a56ua" path="res://Scenes/Levels/[9] BouncyMovable.tscn" id="11_8uejt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwh47"]
 shader = ExtResource("6_5rkkj")
@@ -19,8 +20,7 @@ shader_parameter/scanline_count = 50.0
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
-level_scenes = Array[PackedScene]([ExtResource("2_ivdax"), ExtResource("3_yjxo4"), ExtResource("7_5marn"), ExtResource("5_58k2d"), ExtResource("6_rao22"), ExtResource("4_tvkjn"), ExtResource("8_r3bch"), ExtResource("9_s4rlj"), ExtResource("10_h5f0j")])
-debug_level_index = 8
+level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1tpor"), ExtResource("4_hx6i5"), ExtResource("4_mchev"), ExtResource("6_6ol7s"), ExtResource("7_u8onq"), ExtResource("8_0qx4g"), ExtResource("9_brqnt"), ExtResource("10_joakj"), ExtResource("11_8uejt")])
 show_level_number = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
