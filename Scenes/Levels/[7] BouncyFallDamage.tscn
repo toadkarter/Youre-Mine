@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://qyam8fakyqbt"]
+[gd_scene load_steps=14 format=3 uid="uid://qyam8fakyqbt"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_0y8bh"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_4xn8w"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d3dyufewkt7cl" path="res://Scenes/Environment/Pillars/pillar_base.tscn" id="8_wl7rt"]
 [ext_resource type="PackedScene" uid="uid://boktdc8jgadfe" path="res://Scenes/Environment/Pillars/pillar_top.tscn" id="9_phipd"]
 [ext_resource type="PackedScene" uid="uid://dl8pesfl8ylml" path="res://Scenes/Environment/Damage/Spikes/Movable/movable_spikes.tscn" id="10_b72gd"]
+[ext_resource type="PackedScene" uid="uid://b60rf373tj24s" path="res://Scenes/Environment/Pillars/pillar_broke_top.tscn" id="11_cu5jt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("3_ij4f8")
@@ -263,17 +264,8 @@ jump_factor = 2.1
 position = Vector2(56, 320)
 jump_factor = 2.1
 
-[node name="RegularBlock24" parent="." instance=ExtResource("7_qrw4e")]
-position = Vector2(88, 296)
-
-[node name="RegularBlock39" parent="." instance=ExtResource("7_qrw4e")]
-position = Vector2(88, 312)
-
 [node name="RegularBlock40" parent="." instance=ExtResource("7_qrw4e")]
 position = Vector2(88, 264)
-
-[node name="RegularBlock41" parent="." instance=ExtResource("7_qrw4e")]
-position = Vector2(88, 280)
 
 [node name="RegularBlock42" parent="." instance=ExtResource("7_qrw4e")]
 position = Vector2(88, 248)
@@ -482,17 +474,20 @@ position = Vector2(152, 328)
 [node name="RegularBlock121" parent="." instance=ExtResource("6_x4jmo")]
 position = Vector2(136, 328)
 
+[node name="RegularBlock151" parent="." instance=ExtResource("6_x4jmo")]
+position = Vector2(120, 328)
+
+[node name="RegularBlock148" parent="." instance=ExtResource("6_x4jmo")]
+position = Vector2(136, 280)
+
+[node name="RegularBlock149" parent="." instance=ExtResource("6_x4jmo")]
+position = Vector2(152, 280)
+
+[node name="RegularBlock150" parent="." instance=ExtResource("6_x4jmo")]
+position = Vector2(104, 280)
+
 [node name="RegularBlock145" parent="." instance=ExtResource("6_x4jmo")]
 position = Vector2(104, 328)
-
-[node name="RegularBlock90" parent="." instance=ExtResource("6_x4jmo")]
-position = Vector2(152, 312)
-
-[node name="RegularBlock91" parent="." instance=ExtResource("6_x4jmo")]
-position = Vector2(152, 296)
-
-[node name="RegularBlock92" parent="." instance=ExtResource("6_x4jmo")]
-position = Vector2(152, 280)
 
 [node name="RegularBlock93" parent="." instance=ExtResource("6_x4jmo")]
 position = Vector2(152, 264)
@@ -514,9 +509,6 @@ position = Vector2(152, 184)
 
 [node name="RegularBlock99" parent="." instance=ExtResource("6_x4jmo")]
 position = Vector2(152, 168)
-
-[node name="RegularBlock100" parent="." instance=ExtResource("6_x4jmo")]
-position = Vector2(152, 152)
 
 [node name="RegularBlock86" parent="." instance=ExtResource("6_x4jmo")]
 position = Vector2(200, 328)
@@ -659,15 +651,6 @@ position = Vector2(248, 152)
 [node name="RegularBlock230" parent="." instance=ExtResource("6_x4jmo")]
 position = Vector2(264, 136)
 
-[node name="RegularBlock101" parent="." instance=ExtResource("6_x4jmo")]
-position = Vector2(152, 136)
-
-[node name="RegularBlock102" parent="." instance=ExtResource("6_x4jmo")]
-position = Vector2(152, 120)
-
-[node name="RegularBlock120" parent="." instance=ExtResource("6_x4jmo")]
-position = Vector2(152, 104)
-
 [node name="RegularBlock187" parent="." instance=ExtResource("6_x4jmo")]
 position = Vector2(280, 168)
 
@@ -696,15 +679,7 @@ position = Vector2(296, 120)
 position = Vector2(296, 104)
 
 [node name="MovableSpikes2" parent="." instance=ExtResource("10_b72gd")]
-position = Vector2(120, 320)
-
-[node name="MovableSpikes3" parent="." instance=ExtResource("10_b72gd")]
-position = Vector2(112, 312)
-rotation = 1.57079
-
-[node name="MovableSpikes16" parent="." instance=ExtResource("10_b72gd")]
-position = Vector2(128, 312)
-rotation = -1.57079
+position = Vector2(120, 272)
 
 [node name="MovableSpikes4" parent="." instance=ExtResource("10_b72gd")]
 position = Vector2(264, 320)
@@ -781,14 +756,6 @@ rotation = -1.57079
 position = Vector2(304, 200)
 rotation = -1.57079
 
-[node name="MovableSpikes17" parent="." instance=ExtResource("10_b72gd")]
-position = Vector2(112, 296)
-rotation = 1.57079
-
-[node name="MovableSpikes18" parent="." instance=ExtResource("10_b72gd")]
-position = Vector2(112, 280)
-rotation = 1.57079
-
 [node name="MovableSpikes19" parent="." instance=ExtResource("10_b72gd")]
 position = Vector2(112, 264)
 rotation = 1.57079
@@ -808,14 +775,6 @@ rotation = 1.57079
 [node name="MovableSpikes23" parent="." instance=ExtResource("10_b72gd")]
 position = Vector2(112, 200)
 rotation = 1.57079
-
-[node name="MovableSpikes24" parent="." instance=ExtResource("10_b72gd")]
-position = Vector2(128, 296)
-rotation = 4.71238
-
-[node name="MovableSpikes25" parent="." instance=ExtResource("10_b72gd")]
-position = Vector2(128, 280)
-rotation = 4.71238
 
 [node name="MovableSpikes26" parent="." instance=ExtResource("10_b72gd")]
 position = Vector2(128, 264)
@@ -882,3 +841,6 @@ position = Vector2(280, 320)
 
 [node name="MovableSpikes6" parent="." instance=ExtResource("10_b72gd")]
 position = Vector2(296, 320)
+
+[node name="PillarBrokeTop" parent="." instance=ExtResource("11_cu5jt")]
+position = Vector2(88, 280)
