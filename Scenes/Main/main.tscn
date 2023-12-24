@@ -10,22 +10,20 @@
 [ext_resource type="PackedScene" uid="uid://c7jec3a1rqbmg" path="res://Scenes/Levels/[5] DroppableTiming.tscn" id="6_jut6e"]
 [ext_resource type="PackedScene" uid="uid://bm7vtdyj0uv48" path="res://Scenes/Levels/[6] Bouncy.tscn" id="7_62gye"]
 [ext_resource type="PackedScene" uid="uid://qyam8fakyqbt" path="res://Scenes/Levels/[7] BouncyFallDamage.tscn" id="8_wt3br"]
-[ext_resource type="PackedScene" uid="uid://c4urvpht2kk2k" path="res://Scenes/Levels/[8] DisappearingVanilla.tscn" id="9_3o1rt"]
-[ext_resource type="PackedScene" uid="uid://4d10nmfvqhm0" path="res://Scenes/Levels/[9] Disappearing.tscn" id="10_vsuyi"]
+[ext_resource type="PackedScene" uid="uid://c4urvpht2kk2k" path="res://Scenes/Levels/[10] DisappearingVanilla.tscn" id="10_lg026"]
 [ext_resource type="FontFile" uid="uid://bs2g3w47a1meb" path="res://Art/Fonts/Uncle Lee 3x6.ttf" id="11_8arga"]
-[ext_resource type="PackedScene" uid="uid://dkrmcct1a56ua" path="res://Scenes/Levels/[10] BouncyMovable.tscn" id="11_mfkm5"]
-[ext_resource type="PackedScene" uid="uid://bgv5we3tker55" path="res://Scenes/Levels/[11] MoveableSpikes.tscn" id="12_ngjq4"]
-[ext_resource type="PackedScene" uid="uid://ddv750wvcn5bu" path="res://Scenes/Levels/[12] BouncyMoveableSpike.tscn" id="13_fbtcp"]
+[ext_resource type="PackedScene" uid="uid://4d10nmfvqhm0" path="res://Scenes/Levels/[11] Disappearing.tscn" id="11_wvox8"]
+[ext_resource type="PackedScene" uid="uid://dkrmcct1a56ua" path="res://Scenes/Levels/[12] BouncyMovable.tscn" id="12_iluvj"]
+[ext_resource type="PackedScene" uid="uid://bgv5we3tker55" path="res://Scenes/Levels/[8] MoveableSpikes.tscn" id="13_5kydb"]
+[ext_resource type="PackedScene" uid="uid://ddv750wvcn5bu" path="res://Scenes/Levels/[9] BouncyMoveableSpike.tscn" id="14_xnxco"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwh47"]
 shader = ExtResource("6_5rkkj")
 shader_parameter/scanline_count = 50.0
 
 [node name="Main" type="Node2D"]
-position = Vector2(1, 0)
 script = ExtResource("1_dh43c")
-level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1xe6d"), ExtResource("3_8gcs7"), ExtResource("4_rsrl5"), ExtResource("5_baeej"), ExtResource("6_jut6e"), ExtResource("7_62gye"), ExtResource("8_wt3br"), ExtResource("9_3o1rt"), ExtResource("10_vsuyi"), ExtResource("11_mfkm5"), ExtResource("12_ngjq4"), ExtResource("13_fbtcp")])
-debug_level_index = 3
+level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1xe6d"), ExtResource("3_8gcs7"), ExtResource("4_rsrl5"), ExtResource("5_baeej"), ExtResource("6_jut6e"), ExtResource("7_62gye"), ExtResource("8_wt3br"), ExtResource("13_5kydb"), ExtResource("14_xnxco"), ExtResource("10_lg026"), ExtResource("11_wvox8"), ExtResource("12_iluvj")])
 show_level_number = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
