@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c4pqaqxyf8enb"]
+[gd_scene load_steps=17 format=3 uid="uid://c4pqaqxyf8enb"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_dh43c"]
 [ext_resource type="PackedScene" uid="uid://pro1rrv2neou" path="res://Scenes/Levels/[0] Vanilla.tscn" id="2_qywhg"]
@@ -14,6 +14,7 @@
 [ext_resource type="FontFile" uid="uid://bs2g3w47a1meb" path="res://Art/Fonts/Uncle Lee 3x6.ttf" id="11_8arga"]
 [ext_resource type="PackedScene" uid="uid://dkrmcct1a56ua" path="res://Scenes/Levels/[9] BouncyMovable.tscn" id="11_8uejt"]
 [ext_resource type="PackedScene" uid="uid://bgv5we3tker55" path="res://Scenes/Levels/[10] MoveableSpikes.tscn" id="12_nr4va"]
+[ext_resource type="PackedScene" uid="uid://ddv750wvcn5bu" path="res://Scenes/Levels/[11] BouncyMoveableSpike.tscn" id="13_jwhpc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwh47"]
 shader = ExtResource("6_5rkkj")
@@ -21,8 +22,7 @@ shader_parameter/scanline_count = 50.0
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
-level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1tpor"), ExtResource("4_hx6i5"), ExtResource("4_mchev"), ExtResource("6_6ol7s"), ExtResource("7_u8onq"), ExtResource("8_0qx4g"), ExtResource("9_brqnt"), ExtResource("10_joakj"), ExtResource("11_8uejt"), ExtResource("12_nr4va")])
-debug_level_index = 10
+level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1tpor"), ExtResource("4_hx6i5"), ExtResource("4_mchev"), ExtResource("6_6ol7s"), ExtResource("7_u8onq"), ExtResource("8_0qx4g"), ExtResource("9_brqnt"), ExtResource("10_joakj"), ExtResource("11_8uejt"), ExtResource("12_nr4va"), ExtResource("13_jwhpc")])
 show_level_number = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
