@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ca3wg8c2c3fe"]
+[gd_scene load_steps=16 format=3 uid="uid://ca3wg8c2c3fe"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/Base/base.gd" id="1_xspdt"]
 [ext_resource type="PackedScene" uid="uid://cs1p0fe5g3h5v" path="res://Scenes/Player/player.tscn" id="2_lu000"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://6sgqaad6xubw" path="res://Scenes/Environment/Bridge/bridge_core.tscn" id="9_lnvsp"]
 [ext_resource type="PackedScene" uid="uid://bdjen873586os" path="res://Scenes/Environment/Pillars/pillar_broke_bottom.tscn" id="10_1pjhk"]
 [ext_resource type="PackedScene" uid="uid://b60rf373tj24s" path="res://Scenes/Environment/Pillars/pillar_broke_top.tscn" id="11_1pl2v"]
+[ext_resource type="PackedScene" uid="uid://dvnrbgo8xlbb8" path="res://Scenes/Environment/Chains/chain_top.tscn" id="12_0tc3j"]
+[ext_resource type="PackedScene" uid="uid://d26dgjn5x7q34" path="res://Scenes/Environment/Chains/chain_core.tscn" id="13_wix3l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hewuo"]
 texture = ExtResource("3_q366h")
@@ -398,3 +400,135 @@ position = Vector2(216, 24)
 
 [node name="PillarBrokeTop3" parent="." instance=ExtResource("11_1pl2v")]
 position = Vector2(216, 296)
+
+[node name="ChainTop" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(328, 24)
+
+[node name="ChainTop2" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(312, 24)
+
+[node name="ChainTop3" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(296, 24)
+
+[node name="ChainTop4" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(280, 24)
+
+[node name="ChainTop5" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(264, 24)
+
+[node name="ChainTop6" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(248, 24)
+
+[node name="ChainTop7" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(232, 24)
+
+[node name="chain_core" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(264, 40)
+
+[node name="chain_core2" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(280, 40)
+
+[node name="chain_core3" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(296, 40)
+
+[node name="chain_core4" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(312, 40)
+
+[node name="chain_core5" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(328, 40)
+
+[node name="chain_core6" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(296, 56)
+
+[node name="chain_core7" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(312, 56)
+
+[node name="chain_core8" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(328, 56)
+
+[node name="chain_core9" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(328, 72)
+
+[node name="chain_core10" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(328, 88)
+
+[node name="ChainTop8" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(120, 24)
+
+[node name="ChainTop9" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(104, 24)
+
+[node name="ChainTop10" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(88, 24)
+
+[node name="ChainTop11" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(72, 24)
+
+[node name="ChainTop12" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(56, 24)
+
+[node name="ChainTop13" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(40, 24)
+
+[node name="ChainTop14" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(24, 24)
+
+[node name="chain_core11" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(40, 40)
+
+[node name="chain_core12" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(56, 40)
+
+[node name="chain_core13" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(72, 40)
+
+[node name="chain_core14" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(88, 40)
+
+[node name="chain_core15" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(24, 40)
+
+[node name="chain_core16" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(40, 56)
+
+[node name="chain_core17" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(56, 56)
+
+[node name="ChainTop15" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(168, 24)
+
+[node name="ChainTop16" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(152, 24)
+
+[node name="chain_core21" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(152, 40)
+
+[node name="chain_core22" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(168, 40)
+
+[node name="chain_core23" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(152, 56)
+
+[node name="ChainTop17" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(200, 24)
+
+[node name="ChainTop18" parent="." instance=ExtResource("12_0tc3j")]
+position = Vector2(184, 24)
+
+[node name="chain_core25" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(184, 40)
+
+[node name="chain_core26" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(200, 40)
+
+[node name="chain_core28" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(200, 56)
+
+[node name="chain_core18" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(24, 56)
+
+[node name="chain_core19" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(24, 72)
+
+[node name="chain_core20" parent="." instance=ExtResource("13_wix3l")]
+position = Vector2(24, 88)
