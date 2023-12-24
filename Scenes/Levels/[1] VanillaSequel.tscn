@@ -249,31 +249,6 @@ position = Vector2(0, 80)
 points = PackedVector2Array(16, 64, 336, 64)
 width = 1.0
 
-[node name="bridge_edge" parent="." instance=ExtResource("8_rg3v4")]
-position = Vector2(-112, 208)
-scale = Vector2(-1, 1)
-
-[node name="bridge_edge2" parent="." instance=ExtResource("8_rg3v4")]
-position = Vector2(-240, 152)
-
-[node name="RegularBlock8" parent="." instance=ExtResource("9_4vl6v")]
-position = Vector2(-128, 208)
-
-[node name="RegularBlock11" parent="." instance=ExtResource("9_4vl6v")]
-position = Vector2(-144, 208)
-
-[node name="RegularBlock14" parent="." instance=ExtResource("9_4vl6v")]
-position = Vector2(-160, 208)
-
-[node name="RegularBlock9" parent="." instance=ExtResource("9_4vl6v")]
-position = Vector2(-224, 152)
-
-[node name="RegularBlock10" parent="." instance=ExtResource("9_4vl6v")]
-position = Vector2(-208, 152)
-
-[node name="RegularBlock15" parent="." instance=ExtResource("9_4vl6v")]
-position = Vector2(-192, 152)
-
 [node name="Spikes23" parent="." instance=ExtResource("10_cyypq")]
 position = Vector2(248, 248)
 rotation = 4.71238
@@ -297,18 +272,6 @@ rotation = 1.5708
 [node name="Spikes55" parent="." instance=ExtResource("10_cyypq")]
 position = Vector2(40, 264)
 rotation = 1.5708
-
-[node name="Spikes50" parent="." instance=ExtResource("10_cyypq")]
-position = Vector2(376, 320)
-rotation = 7.85398
-
-[node name="Spikes51" parent="." instance=ExtResource("10_cyypq")]
-position = Vector2(376, 304)
-rotation = 7.85398
-
-[node name="Spikes52" parent="." instance=ExtResource("10_cyypq")]
-position = Vector2(376, 336)
-rotation = 7.85398
 
 [node name="Spikes26" parent="." instance=ExtResource("10_cyypq")]
 position = Vector2(232, 264)

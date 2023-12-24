@@ -24,7 +24,7 @@ shader_parameter/scanline_count = 50.0
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
 level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1xe6d"), ExtResource("3_8gcs7"), ExtResource("4_rsrl5"), ExtResource("5_baeej"), ExtResource("6_jut6e"), ExtResource("7_62gye"), ExtResource("8_wt3br"), ExtResource("9_3o1rt"), ExtResource("10_vsuyi"), ExtResource("11_mfkm5"), ExtResource("12_ngjq4"), ExtResource("13_fbtcp")])
-debug_level_index = 1
+debug_level_index = 7
 show_level_number = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
