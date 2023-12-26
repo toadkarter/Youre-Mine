@@ -368,6 +368,7 @@ position = Vector2(312, 208)
 
 [node name="MovableSpikes2" parent="." instance=ExtResource("7_itode")]
 position = Vector2(296, 208)
+start_retracted = true
 
 [node name="MovableSpikes3" parent="." instance=ExtResource("7_itode")]
 position = Vector2(280, 208)
