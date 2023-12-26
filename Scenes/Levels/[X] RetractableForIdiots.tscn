@@ -237,7 +237,7 @@ layer_0/tile_data = PackedInt32Array(0, 0, 1, 65536, 0, 4, 131072, 0, 4, 196608,
 [node name="HUD" parent="." instance=ExtResource("4_gblg5")]
 
 [node name="SpawnLocation" type="Node2D" parent="."]
-position = Vector2(168, 192)
+position = Vector2(296, 192)
 
 [node name="bridge_edge" parent="." instance=ExtResource("8_kl10i")]
 position = Vector2(328, 216)
@@ -365,10 +365,33 @@ rotation = 3.14159
 
 [node name="MovableSpikes" parent="." instance=ExtResource("7_itode")]
 position = Vector2(312, 208)
+spikes_up_seconds = 1.2
+spikes_down_seconds = 1.2
+start_retracted = true
 
 [node name="MovableSpikes2" parent="." instance=ExtResource("7_itode")]
 position = Vector2(296, 208)
+spikes_up_seconds = 1.2
+spikes_down_seconds = 1.2
 start_retracted = true
 
 [node name="MovableSpikes3" parent="." instance=ExtResource("7_itode")]
 position = Vector2(280, 208)
+spikes_up_seconds = 1.2
+spikes_down_seconds = 1.2
+start_retracted = true
+
+[node name="MovableSpikes4" parent="." instance=ExtResource("7_itode")]
+position = Vector2(72, 208)
+spikes_up_seconds = 1.2
+spikes_down_seconds = 1.2
+
+[node name="MovableSpikes5" parent="." instance=ExtResource("7_itode")]
+position = Vector2(56, 208)
+spikes_up_seconds = 1.2
+spikes_down_seconds = 1.2
+
+[node name="MovableSpikes6" parent="." instance=ExtResource("7_itode")]
+position = Vector2(40, 208)
+spikes_up_seconds = 1.2
+spikes_down_seconds = 1.2
