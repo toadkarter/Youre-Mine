@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c4pqaqxyf8enb"]
+[gd_scene load_steps=23 format=3 uid="uid://c4pqaqxyf8enb"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_dh43c"]
 [ext_resource type="PackedScene" uid="uid://c5c13bvsukf06" path="res://Scenes/Intro/intro.tscn" id="2_3y3kh"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dkrmcct1a56ua" path="res://Scenes/Levels/[12] BouncyMovable.tscn" id="12_iluvj"]
 [ext_resource type="PackedScene" uid="uid://bgv5we3tker55" path="res://Scenes/Levels/[8] MoveableSpikes.tscn" id="13_5kydb"]
 [ext_resource type="PackedScene" uid="uid://ddv750wvcn5bu" path="res://Scenes/Levels/[9] BouncyMoveableSpike.tscn" id="14_xnxco"]
+[ext_resource type="PackedScene" uid="uid://dca7ysnu152y5" path="res://Scenes/Outro/outro.tscn" id="18_pq1g7"]
 [ext_resource type="AudioStream" uid="uid://cxtamxoido7u1" path="res://Audio/Music/main.wav" id="19_bx3kg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cwh47"]
@@ -29,6 +30,7 @@ shader_parameter/scanline_count = 50.0
 script = ExtResource("1_dh43c")
 intro_scene = ExtResource("2_3y3kh")
 level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1xe6d"), ExtResource("4_ciglm"), ExtResource("3_8gcs7"), ExtResource("4_rsrl5"), ExtResource("5_baeej"), ExtResource("6_jut6e"), ExtResource("7_62gye"), ExtResource("8_wt3br"), ExtResource("11_rr6px"), ExtResource("13_5kydb"), ExtResource("14_xnxco"), ExtResource("10_lg026"), ExtResource("11_wvox8"), ExtResource("12_iluvj")])
+outro_scene = ExtResource("18_pq1g7")
 show_level_text = ""
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

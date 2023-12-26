@@ -6,22 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://b6nelx5tdhs1k" path="res://Audio/Music/intro.wav" id="3_ho76t"]
 [ext_resource type="AudioStream" uid="uid://c83kcgpba6q6g" path="res://Audio/SFX/stinger.wav" id="5_tohxt"]
 
-[sub_resource type="Animation" id="Animation_qeyei"]
-resource_name = "final_paragraph_fade_out"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/FinalParagraph:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_nisi5"]
 length = 0.001
 tracks/0/type = "value"
@@ -59,6 +43,22 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qeyei"]
+resource_name = "final_paragraph_fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FinalParagraph:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_4105w"]
