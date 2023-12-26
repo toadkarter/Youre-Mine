@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5c13bvsukf06"]
+[gd_scene load_steps=9 format=3 uid="uid://c5c13bvsukf06"]
 
 [ext_resource type="Script" path="res://Scenes/Intro/intro.gd" id="1_0bbmj"]
+[ext_resource type="FontFile" uid="uid://bgh6p7veytviu" path="res://Art/Fonts/Fortzilla-Regular.otf" id="2_gfgdk"]
 [ext_resource type="FontFile" uid="uid://bs2g3w47a1meb" path="res://Art/Fonts/Uncle Lee 3x6.ttf" id="2_x7bi0"]
 [ext_resource type="AudioStream" uid="uid://b6nelx5tdhs1k" path="res://Audio/Music/intro.wav" id="3_ho76t"]
+[ext_resource type="AudioStream" uid="uid://c83kcgpba6q6g" path="res://Audio/SFX/stinger.wav" id="5_tohxt"]
 
 [sub_resource type="Animation" id="Animation_qeyei"]
 resource_name = "final_paragraph_fade_out"
@@ -85,6 +87,37 @@ the dungeon speaks, and a final thought
 enters their minds..."
 horizontal_alignment = 1
 
+[node name="StingerBackground" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.427451)
+
+[node name="StingerLabel" type="Label" parent="CanvasLayer/StingerBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.5
+offset_top = -106.0
+offset_right = 140.5
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gfgdk")
+theme_override_font_sizes/font_size = 90
+text = "YOU'RE
+MINE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BGMPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ho76t")
 
@@ -92,3 +125,7 @@ stream = ExtResource("3_ho76t")
 libraries = {
 "": SubResource("AnimationLibrary_a4egm")
 }
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_tohxt")
+volume_db = 2.0
