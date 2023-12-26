@@ -14,6 +14,7 @@ var current_level: Level = null
 
 @onready var crt_filter: ColorRect = $CanvasLayer/CRTFilter
 @onready var level_number_label: Label = $CanvasLayer/LevelNumber
+@onready var bgm_player: AudioStreamPlayer2D = $BGMPlayer
 
 
 func _ready() -> void:
@@ -27,6 +28,7 @@ func _process(_delta: float) -> void:
 
 
 func _start_level_loop() -> void:
+	bgm_player.play()
 	if (debug_level_index != 0 and debug_level_index < level_scenes.size()):
 		current_level_index = debug_level_index
 		_load_level(debug_level_index)
