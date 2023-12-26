@@ -29,6 +29,8 @@ shader_parameter/scanline_count = 50.0
 script = ExtResource("1_dh43c")
 intro_scene = ExtResource("2_3y3kh")
 level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1xe6d"), ExtResource("4_ciglm"), ExtResource("3_8gcs7"), ExtResource("4_rsrl5"), ExtResource("5_baeej"), ExtResource("6_jut6e"), ExtResource("7_62gye"), ExtResource("8_wt3br"), ExtResource("11_rr6px"), ExtResource("13_5kydb"), ExtResource("14_xnxco"), ExtResource("10_lg026"), ExtResource("11_wvox8"), ExtResource("12_iluvj")])
+show_level_text = ""
+skip_intro = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -48,6 +50,18 @@ offset_bottom = 39.0
 theme_override_fonts/font = ExtResource("11_8arga")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RestartPrompt" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -324.0
+offset_top = 24.0
+offset_right = -246.0
+offset_bottom = 47.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("11_8arga")
+text = "[R]ESTART"
 
 [node name="BGMPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_bx3kg")

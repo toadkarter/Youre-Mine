@@ -1,10 +1,14 @@
 extends Node2D
+class_name Intro
+
+signal finished
 
 const FINAL_PARAGRAPH_SPACING: float = 75.0
 
 @export var scroll_speed: float = 40.0
 @export var starting_scroll_position = 400
 @export var final_paragraph_finish_position = 150.0
+@export var seconds_before_game_loop = 3.0
 
 var text_intro_complete: bool = false
 
@@ -45,3 +49,11 @@ func _start_intro_stinger() -> void:
 	bgm_player.stop()
 	sfx_player.play()
 	stinger_background.visible = true
+	await get_tree().create_timer(seconds_before_game_loop).timeout
+	var stinger_fade_out_length: float = animation_player.get_animation("stinger_fade_out").length
+	animation_player.play("stinger_fade_out")
+	await get_tree().create_timer(stinger_fade_out_length).timeout
+	finished.emit()
+	
+	
+	
