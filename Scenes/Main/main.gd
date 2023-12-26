@@ -1,6 +1,7 @@
 extends Node2D
 
 
+@export var intro_scene: PackedScene
 @export var level_scenes: Array[PackedScene]
 
 @export_group("Debug")
@@ -19,7 +20,9 @@ var current_level: Level = null
 
 func _ready() -> void:
 	_init_debug_options()
-	_start_level_loop()
+	var intro = intro_scene.instantiate()
+	add_child(intro)
+	#_start_level_loop()
 
 
 func _process(_delta: float) -> void:

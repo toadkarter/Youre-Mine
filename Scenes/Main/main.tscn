@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://c4pqaqxyf8enb"]
+[gd_scene load_steps=22 format=3 uid="uid://c4pqaqxyf8enb"]
 
 [ext_resource type="Script" path="res://Scenes/Main/main.gd" id="1_dh43c"]
+[ext_resource type="PackedScene" uid="uid://c5c13bvsukf06" path="res://Scenes/Intro/intro.tscn" id="2_3y3kh"]
 [ext_resource type="PackedScene" uid="uid://pro1rrv2neou" path="res://Scenes/Levels/[0] Vanilla.tscn" id="2_qywhg"]
 [ext_resource type="PackedScene" uid="uid://uctuwpbdnnq3" path="res://Scenes/Levels/[1] VanillaSequel.tscn" id="3_1xe6d"]
 [ext_resource type="PackedScene" uid="uid://ca3wg8c2c3fe" path="res://Scenes/Levels/[2] FallDamage.tscn" id="3_8gcs7"]
@@ -26,8 +27,8 @@ shader_parameter/scanline_count = 50.0
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_dh43c")
+intro_scene = ExtResource("2_3y3kh")
 level_scenes = Array[PackedScene]([ExtResource("2_qywhg"), ExtResource("3_1xe6d"), ExtResource("4_ciglm"), ExtResource("3_8gcs7"), ExtResource("4_rsrl5"), ExtResource("5_baeej"), ExtResource("6_jut6e"), ExtResource("7_62gye"), ExtResource("8_wt3br"), ExtResource("11_rr6px"), ExtResource("13_5kydb"), ExtResource("14_xnxco"), ExtResource("10_lg026"), ExtResource("11_wvox8"), ExtResource("12_iluvj")])
-show_level_number = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -45,7 +46,6 @@ offset_top = 16.0
 offset_right = 102.0
 offset_bottom = 39.0
 theme_override_fonts/font = ExtResource("11_8arga")
-text = "Current Level: "
 horizontal_alignment = 1
 vertical_alignment = 1
 

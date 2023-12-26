@@ -13,6 +13,7 @@ config_version=5
 config/name="You're Mine"
 run/main_scene="res://Scenes/Main/main.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.png"
 
 [display]
@@ -64,3 +65,4 @@ quit={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

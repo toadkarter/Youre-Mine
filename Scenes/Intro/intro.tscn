@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5c13bvsukf06"]
+
+[ext_resource type="Script" path="res://Scenes/Intro/intro.gd" id="1_0bbmj"]
+[ext_resource type="FontFile" uid="uid://bs2g3w47a1meb" path="res://Art/Fonts/Uncle Lee 3x6.ttf" id="2_x7bi0"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_0bbmj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScrollingText" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.0
+offset_top = 704.0
+offset_right = 115.0
+offset_bottom = 730.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_x7bi0")
+text = "Hello this is some default text"
+horizontal_alignment = 1
