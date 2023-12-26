@@ -112,25 +112,28 @@ offset_bottom = 730.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_x7bi0")
-text = "Many an adventurer has felt its pull... A need to 
-descend further into those profane depths 
+text = "In places deep, beyond the reach of the 
+cautious and the wise, there is a dungeon. 
+
+Many an adventurer has felt its pull...
+A need to descend into profane depths 
 for knowledge that lies beneath.
 
 None return. 
+
 Their minds turned blank by the eldritch madness 
 that lives within those hollow caverns, 
-they are lured to violent doom.
-"
+they are lured to violent doom."
 horizontal_alignment = 1
 
 [node name="FinalParagraph" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -115.0
-offset_top = 888.0
-offset_right = 115.0
-offset_bottom = 948.0
+offset_left = -118.0
+offset_top = 1016.0
+offset_right = 112.0
+offset_bottom = 1076.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_x7bi0")

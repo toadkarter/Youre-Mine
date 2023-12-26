@@ -3,7 +3,7 @@ class_name Intro
 
 signal finished
 
-const FINAL_PARAGRAPH_SPACING: float = 75.0
+const FINAL_PARAGRAPH_SPACING: float = 150
 
 @export var scroll_speed: float = 40.0
 @export var starting_scroll_position = 400
